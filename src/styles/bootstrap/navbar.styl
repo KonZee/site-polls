@@ -10,7 +10,7 @@
 
 .navbar
   position relative
-  //min-height $navbar-height // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
+  min-height $navbar-height // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
   margin-bottom $navbar-margin-bottom
   border 1px solid transparent
 
@@ -18,7 +18,7 @@
   @extend .clearfix
 
   @media (min-width $grid-float-breakpoint)
-    //border-radius $navbar-border-radius
+    border-radius $navbar-border-radius
 
 
 // Navbar heading
@@ -284,6 +284,7 @@
   border-top-radius(0)
 // Menu position and menu caret support for dropups via extra dropup class
 .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu
+  margin-bottom 0
   border-top-radius($navbar-border-radius)
   border-bottom-radius(0)
 
@@ -324,10 +325,10 @@
 
 @media (min-width $grid-float-breakpoint)
   .navbar-left
-    @extends .pull-left
+    float left !important
 
   .navbar-right
-    @extends .pull-right
+    float right !important
     margin-right -($navbar-padding-horizontal)
 
     ~ .navbar-right
