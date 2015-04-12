@@ -191,7 +191,7 @@ module.exports = function (grunt){
 			},
 			jade: {
 				files: ['src/templates/**/*.jade'],
-				tasks: ['newer:jade']
+				tasks: ['jade']
 			},
 			jshint: {
 				files: ['src/scripts/**/*.js'],
