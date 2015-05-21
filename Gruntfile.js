@@ -113,25 +113,31 @@ module.exports = function (grunt){
 					filter: 'isFile'
 				}]
 			},
-			images: {
+			fonts: {
 				files: [{
 					expand: true,
-					cwd: 'src/images',
-					src: ['**/*.{png,jpg,jpeg,gif,svg}'],
-					dest: 'dist/images',
+					cwd: 'src/fonts',
+					src: ['**/*'],
+					dest: 'dist/css/fonts',
 					filter: 'isFile'
 				}]
 			},
 		},
 
-		// imagemin: {
-		// 	files: {
-		// 		expand: true,
-		// 		cwd: 'src/images',
-		// 		src: ['**/*.{png,jpg,gif}'],
-		// 		dest: 'result/images'
-		// 	}
-		// },
+		imagemin: {
+			options: {
+				progressive: true
+			},
+			images: {
+				files: [{
+					expand: true,
+					cwd: 'src/images',
+					src: ['**/*.{png,jpg,gif}'],
+					dest: 'dist/images'
+				}]
+			}
+		},
+
 
 		browserSync: {
 			dist: {
@@ -201,9 +207,13 @@ module.exports = function (grunt){
 				files: ['src/scripts/**/*'],
 				tasks: ['newer:copy:scripts']
 			},
+			fonts: {
+				files: ['src/fonts/**/*'],
+				tasks: ['newer:copy:fonts']
+			},
 			images: {
 				files: ['src/images/**/*'],
-				tasks: ['newer:copy:images']
+				tasks: ['newer:imagemin']
 			},
 
 		}
@@ -212,13 +222,6 @@ module.exports = function (grunt){
 
 	require('load-grunt-tasks')(grunt);
 
-	// grunt.loadNpmTasks('grunt-contrib-clean');
-	// grunt.loadNpmTasks('grunt-contrib-stylus');
-	// grunt.loadNpmTasks('grunt-autoprefixer');
-	// grunt.loadNpmTasks('grunt-combine-media-queries');
-	// grunt.loadNpmTasks('grunt-csscomb');
-	// grunt.loadNpmTasks('grunt-contrib-jade');
-
-	grunt.registerTask('default', ['clean', 'stylus', 'autoprefixer', 'cmq', 'csscomb', 'jade', 'jshint', 'copy', 'browserSync', 'watch']);
+	grunt.registerTask('default', ['clean', 'stylus', 'autoprefixer', 'cmq', 'csscomb', 'jade', 'jshint', 'copy', 'imagemin', 'browserSync', 'watch']);
 
 };
