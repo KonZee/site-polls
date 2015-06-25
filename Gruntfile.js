@@ -75,9 +75,14 @@ module.exports = function (grunt){
 				options: {
 					pretty: '\t', // Not work correctly, probably yet. In Jade API doc it can be Boolean|String type, in fact only Boolean and non-empty string converted to true.
 				},
-				files: {
-					'dist/index.html': 'src/templates/index.jade'
-				}
+				files: [{
+					expand: true,
+					cwd: 'src/templates',
+					src: ['**/*.jade', '!base.jade', '!elements/*.jade'],
+					dest: 'dist',
+					filter: 'isFile',
+					ext: '.html'
+				}]
 			}
 		},
 
