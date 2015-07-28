@@ -29,17 +29,11 @@ module.exports = function (grunt){
 			}
 		},
 
-		autoprefixer: {
+		postcss: {
 			options: {
-				browsers: [
-				'Android 2.3',
-				'Android >= 4',
-				'Chrome >= 20',
-				'Firefox >= 24', // Firefox 24 is the latest ESR
-				'Explorer >= 8',
-				'iOS >= 6',
-				'Opera >= 12',
-				'Safari >= 6'
+				map: true,
+				processors: [
+					require('autoprefixer-core')({browsers: ['last 2 version']})
 				]
 			},
 			dist: {
@@ -227,6 +221,6 @@ module.exports = function (grunt){
 
 	require('load-grunt-tasks')(grunt);
 
-	grunt.registerTask('default', ['clean', 'stylus', 'autoprefixer', 'cmq', 'csscomb', 'jade', 'jshint', 'copy', 'imagemin', 'browserSync', 'watch']);
+	grunt.registerTask('default', ['clean', 'stylus', 'postcss', 'cmq', 'csscomb', 'jade', 'jshint', 'copy', 'imagemin', 'browserSync', 'watch']);
 
 };
