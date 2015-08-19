@@ -1,3 +1,1 @@
-Boilerplate for fast markup
-
-Used Bootstrap Stylus from https://github.com/maxmx/bootstrap-stylus
+Polls and questions site work project.
