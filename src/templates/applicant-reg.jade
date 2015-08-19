@@ -1,0 +1,43 @@
+extends base
+
+block title
+	| Регистрация соискателя
+
+block content
+	.container.container--centered
+		.reset-flex
+			form.form.block.registration.registration--white
+				.block__title.block__title--accented.text-center Регистрация соискателя
+				.block__paddings
+					.form__group.form__group--margin
+						input.input.input--textfield(placeholder="Введите email")
+						include elements/svg/mail
+					.form__group.form__group--margin
+						input.input.input--textfield(type="password", placeholder="Введите пароль")
+						include elements/svg/password
+					.form__group.form__group--margin
+						input.input.input--textfield(type="password", placeholder="Повторите пароль")
+						include elements/svg/password
+					.form__group.form__group--margin
+						input.input.input--textfield(placeholder="Имя")
+						include elements/svg/user
+					.form__group.form__group--margin
+						input.input.input--textfield(placeholder="Фамилия")
+						include elements/svg/user
+					.form__group.form__group--margin
+						input.input.input--textfield(placeholder="Год рождения")
+						include elements/svg/calendar
+					.form__group.form__group--margin
+						input.input.input--textfield(placeholder="Город")
+						include elements/svg/place
+					.form__group.form__group--margin
+						textarea.input.input--textfield(placeholder="О себе")
+						include elements/svg/aa
+				.form__subscription.text-center
+					.form__group
+						label.input__label.input__label--checkbox.input__label--inline
+							input.input.input--checkbox(type="checkbox")
+							span Подписаться на рассылку
+					.form__text Нажимая кнопу "Зарегистрироваться" <br /> вы принимаете <a href="">данные условия</a>
+				a(href="").button.button--green.input.input__submit.text-center Зарегистрироваться
+

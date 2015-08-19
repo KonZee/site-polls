@@ -1,0 +1,153 @@
+extends base
+
+block title
+	| Вакансия такая-то
+
+block content
+	.container.container--centered
+		.reset-flex
+			form.form.block.vacancy.vacancy--white
+				.block__title Вакансия "Название вакансии"
+				.line
+				.block__paddings.flex
+					.vacancy__description
+						.block__subtitle Описание вакансии
+						+lipsum(1, "paragraphs")
+					.vacancy__company
+						.block__subtitle
+							+lipsum(5, "words")
+						img.media.media__logo
+
+
+				.line
+
+
+				.block__paddings.flex.flex--space-between
+					.vacancy__info
+						.block__subtitle.block__subtitle--accented Заполните информацию о себе
+						.form__group.form__group--margin
+							input.input.input--textfield(placeholder="Имя")
+							include elements/svg/user
+						.form__group.form__group--margin
+							input.input.input--textfield(placeholder="Фамилия")
+							include elements/svg/user
+						.form__group.form__group--margin
+							input.input.input--textfield(placeholder="Год рождения")
+							include elements/svg/calendar
+						.form__group.form__group--margin
+							textarea.input.input--textfield(placeholder="О себе")
+							include elements/svg/aa
+						.form__group.form__group--margin
+							.input__label.input__label--file.text-center
+								input.input--file(type="file" data-placeholder="Приложить резюме")
+								span.placeholder Приложить резюме
+								span.attach-icon.attach-icon--empty
+									include elements/svg/attach
+								span.attach-icon.attach-icon--attached
+									include elements/svg/attached
+								span.attach-icon.attach-icon--remove
+									include elements/svg/remove
+					.vacancy__autorization
+						.form
+							.block__subtitle.block__subtitle--accented Пройдите авторизацию
+							.form__group.form__group--margin
+								input.input.input--textfield.input--mail.input--sign(placeholder="Введите e-mail")
+								include elements/svg/mail
+								.icon.icon--check
+							.form__group.form__group--margin
+								input.input.input--textfield.input--password.input--sign(type="password", placeholder="Введите пароль")
+								include elements/svg/password
+							a(href="").button.button--green.button--small.button--rounded.input.input__submit.text-center Авторизоваться
+						.vacancy__line
+							.text или
+
+
+				.line
+
+
+				.vacancy__info
+					.block__paddings
+						.block__subtitle.block__subtitle--accented Заполнить информацию о себе
+					.block__paddings.flex.flex--space-between
+						.vacancy__left-col
+							.form__group.form__group--margin
+								.form__group-title Опыт работы:
+								span.form__group.form__group--margin
+									input.input.input.input--textfield
+									a(href="").input__remove
+										include elements/svg/plus
+								a(href="").input__addelement
+									include elements/svg/plus
+									.text-add Добавить еще поля
+							.form__group.form__group--margin
+								.form__group-title Как вы оцениваете свою квалификацию:
+								.form__group.form__group--margin
+									label.input__label.input__label--radio.input__label--block
+										input.input.input--checkbox(type="radio" name="qualify")
+										span Низкая
+									label.input__label.input__label--radio.input__label--block
+										input.input.input--checkbox(type="radio" name="qualify")
+										span Средняя
+									label.input__label.input__label--radio.input__label--block
+										input.input.input--checkbox(type="radio" name="qualify")
+										span Высокая
+							.form__group.form__group--margin
+								.form__group-title Какие языки вы еще знаете:
+								.form__group.form__group--margin.columns.columns--half
+									label.input__label.input__label--checkbox.input__label--block
+										input.input.input--checkbox(type="checkbox")
+										span Язык
+									label.input__label.input__label--checkbox.input__label--block
+										input.input.input--checkbox(type="checkbox")
+										span Язык
+									label.input__label.input__label--checkbox.input__label--block
+										input.input.input--checkbox(type="checkbox")
+										span Язык
+									label.input__label.input__label--checkbox.input__label--block
+										input.input.input--checkbox(type="checkbox")
+										span Язык
+									label.input__label.input__label--checkbox.input__label--block
+										input.input.input--checkbox(type="checkbox")
+										span Язык
+									label.input__label.input__label--checkbox.input__label--block
+										input.input.input--checkbox(type="checkbox")
+										span Язык
+									label.input__label.input__label--checkbox.input__label--block
+										input.input.input--checkbox(type="checkbox")
+										span Язык
+									label.input__label.input__label--checkbox.input__label--block
+										input.input.input--checkbox(type="checkbox")
+										span Язык
+
+
+							.form__group
+								.form__group.form__group--input-margin
+									.input__label.input__label--file.text-center
+										input.input--file(type="file" data-placeholder="Приложить файл")
+										span.placeholder Приложить резюме
+										span.attach-icon.attach-icon--empty
+											include elements/svg/attach
+										span.attach-icon.attach-icon--attached
+											include elements/svg/attached
+										span.attach-icon.attach-icon--remove
+											include elements/svg/remove
+								a(href="").input__addelement
+									include elements/svg/plus
+									.text-add Добавить еще поля
+
+
+						.vacancy__right-col
+							.form__group.form__group--margin
+								.form__group-title Какие обязанности были на прошлой работе:
+								textarea.input.input.input--textfield
+							.form__group.form__group--margin
+								.form__group-title Ваши планы на дальнейшее развитие:
+								span.form__group.form__group--margin
+									textarea.input.input.input--textfield
+									.input__remove
+										include elements/svg/plus
+								a(href="").input__addelement
+									include elements/svg/plus
+									.text-add Добавить еще поля
+
+				a(href="").button.button--green.input.input__submit.text-center Отправить предложение

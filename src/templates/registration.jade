@@ -1,0 +1,43 @@
+extends base
+
+block title
+	| Регистрация
+
+block content
+	.container.container--centered
+		.reset-flex
+			form.form.block.registration.registration--white
+				.block__title.block__title--accented.text-center Регистрация
+				.block__paddings
+					.form__group.form__group--margin
+						input.input.input--textfield(placeholder="Введите email")
+						include elements/svg/mail
+					.form__group.form__group--margin
+						input.input.input--textfield(type="password", placeholder="Введите пароль")
+						include elements/svg/password
+					.form__group.form__group--margin
+						input.input.input--textfield(type="password", placeholder="Повторите пароль")
+						include elements/svg/password
+				.block__title.block__title--accented.text-center Информация о компании
+				.block__paddings
+					.form__group.form__group--margin
+						input.input.input--textfield(placeholder="Название компании")
+						include elements/svg/tt
+					.form__group.form__group--margin
+						.form__common-label.form__common-label--block Тип компании:
+						.form__group
+							label.input__label.input__label--checkbox.input__label--block
+								input.input.input--checkbox(type="checkbox")
+								span Прямой работодатель
+							label.input__label.input__label--checkbox.input__label--block
+								input.input.input--checkbox(type="checkbox")
+								span Кадровое агетство
+				.line
+				.form__subscription.text-center
+					.form__group
+						label.input__label.input__label--checkbox.input__label--inline
+							input.input.input--checkbox(type="checkbox")
+							span Подписаться на рассылку
+					.form__text Нажимая кнопу "Зарегистрироваться" <br /> вы принимаете <a href="">данные условия</a>
+				a(href="").button.button--green.input.input__submit.text-center Зарегистрироваться
+

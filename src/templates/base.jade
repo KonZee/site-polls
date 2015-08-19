@@ -2,9 +2,35 @@ doctype html
 html(lang='en')
 
 	include elements/head
+	include elements/lipsum
 
 	body
-	
-		block content
-	
+
+		header.header.header--gray
+			.container
+				a(href="").logo.logo--gold
+					| Domain
+					//- Including menu
+					include elements/menu
+
+		.breadcrumbs.breadcrumbs--white
+			.container
+				block breadcrumbs
+					a(href="") Главная
+					i.fa.fa-angle-right
+					a(href="") Промежуточная
+					i.fa.fa-angle-right
+					span Текущая страница
+
+		main
+			block content
+				.container
+
+		footer.footer.footer--gray
+			.container
+				a(href="") Регистрация
+				a(href="") Добавить вакансию/опрос
+				a(href="") Список опросов
+				a(href="") Список вакансий
+
 	include elements/scripts

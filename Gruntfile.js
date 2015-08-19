@@ -9,15 +9,6 @@ module.exports = function (grunt){
 		},
 
 		stylus: {
-			bootstrap: {
-				options: {
-					compress: false,
-					paths: ['src/styles']
-				},
-				files: {
-					'dist/css/bootstrap.css': 'src/styles/bootstrap/bootstrap.styl'
-				}
-			},
 			main: {
 				options: {
 					compress: false,
@@ -31,7 +22,7 @@ module.exports = function (grunt){
 
 		postcss: {
 			options: {
-				map: true,
+				map: false,
 				processors: [
 					require('autoprefixer-core')({browsers: ['last 2 version']})
 				]
@@ -44,7 +35,6 @@ module.exports = function (grunt){
 		cmq: {
 			dist: {
 				files: [{
-					'dist/css/bootstrap.css': ['dist/css/bootstrap.css'],
 					'dist/css/main.css': ['dist/css/main.css']
 				}]
 			}
@@ -72,7 +62,7 @@ module.exports = function (grunt){
 				files: [{
 					expand: true,
 					cwd: 'src/templates',
-					src: ['**/*.jade', '!base.jade', '!elements/*.jade'],
+					src: ['**/*.jade', '!base.jade', '!elements/**/*.jade'],
 					dest: 'dist',
 					filter: 'isFile',
 					ext: '.html'
@@ -192,7 +182,7 @@ module.exports = function (grunt){
 			},
 			stylus: {
 				files: ['src/styles/**/*.styl'],
-				tasks: ['stylus', 'autoprefixer', 'cmq', 'csscomb']
+				tasks: ['stylus', 'postcss', 'cmq', 'csscomb']
 			},
 			jade: {
 				files: ['src/templates/**/*.jade'],

@@ -1,0 +1,49 @@
+extends base
+
+block title
+	| Ответа на вакансию
+
+block content
+	.container.container--centered
+		//.element.element--centered.flex--column
+		.answer
+			.form.block.answer__answer.answer__answer--white
+				.block__title Вакансия "%Название вакансии%"
+				.block__paddings
+					.answer__author
+						i Ответ <strong>Пантелеймона Христорождесвенского</strong>
+				.line
+				.block__paddings
+					.answer__section
+						.answer__section-title Опыт работы:
+						.answer__section-data 5 лет
+					.answer__section
+						.answer__section-title Как вы оцениваете свою квалификацию:
+						.answer__section-data Низкая
+					.answer__section
+						.answer__section-title Опишите, какие обязанности были на прошлой работе:
+						.answer__section-data
+							+lipsum(2, "paragraphs")
+					.answer__section
+						.answer__section-title Опишите, какие обязанности были на прошлой работе:
+						.answer__section-data
+							+lipsum(1, "paragraphs")
+					.answer__section
+						.answer__section-title Какие еще языки вы знаете:
+						.answer__section-languages
+							span.language php
+							span.language JavaScript
+							span.language JavaScript
+							span.language JavaScript
+							span.language JavaScript
+							span.language JavaScript
+							span.language JavaScript
+							span.language JavaScript
+							span.language Python
+					.block__subtitle Приложите примеры своих работ: <a href="">Скачать файл</a>
+				.line
+				.block__paddings
+			.block.answer__info.answer__info--white
+				.block__title Информация о соискателе
+				.line
+

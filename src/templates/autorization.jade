@@ -1,0 +1,30 @@
+extends base
+
+block title
+	| Авторизация
+
+block content
+	.container.container--centered
+		//.element.element--centered.flex--column
+		.reset-flex
+			form.form.block.autorization.autorization--white
+				.block__title.block__title--accented.text-center Авторизация
+				.block__paddings
+					.form__group.form__group--margin
+						input.input.input--textfield.input--mail.input--sign(placeholder="Введите e-mail")
+						include elements/svg/mail
+						//-.icon.icon--check // Dummy for validation
+						.input__error * Ошибка заполнения поля
+					.form__group.form__group--margin
+						input.input.input--textfield.input--password.input--sign(type="password", placeholder="Введите пароль")
+						include elements/svg/password
+					.form__text
+						i Забыли пароль? Вы можете <a href="">восстановить его</a>
+					.form__group
+						label.input__label.input__label--radio.input__label--inline
+							input.input.input--radio(type="radio" name="autorization-type")
+							span Как работодатель
+						label.input__label.input__label--radio.input__label--inline
+							input.input.input--radio(type="radio" name="autorization-type")
+							span Как работник
+				a(href="").button.button--green.input.input__submit.text-center Авторизоваться

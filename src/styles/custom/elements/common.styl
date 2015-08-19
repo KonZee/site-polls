@@ -1,0 +1,145 @@
+*
+	box-sizing border-box
+	outline none
+	&:after
+	&:before
+		box-sizing inherit
+
+html
+	display flex
+	min-height 100%
+	flex-direction column
+	font-family "Open Sans", sans-serif
+	font-size 14px
+
+body
+	display flex
+	flex-direction column
+	flex auto
+	position relative
+	&:before
+		display flex
+		position absolute
+		flex auto
+		content ""
+		background #ededed url("../images/background.jpg") no-repeat top center fixed
+		opacity 0.09
+		left 0
+		top 0
+		right 0
+		bottom 0
+		z-index -1
+
+a
+	color #2980b9
+
+.clearfix
+	&:before
+		min-height 1px
+		content ""
+		display table
+	&:after
+		min-height 1px
+		content ""
+		display table
+		clear both
+
+.container
+	width 100%
+	max-width 1142px
+	min-width 960px
+	display flex
+	&--block
+	&--centered
+		justify-content center
+	&--vertical
+		flex-direction column
+
+.element
+	display flex
+	&--centered
+		flex 0 0 0
+
+.flex
+	display flex
+	&--wrap
+		flex-wrap wrap
+	&--column
+		flex-direction column
+	&--space-between
+		justify-content space-between
+
+.reset-flex
+	display block
+
+a
+	text-decoration none
+
+//Elements
+.block
+	&__paddings
+		padding 0 30px
+	&__title
+		font-size 24px
+		position relative
+		padding 28px 30px
+		&--accented
+			padding 45px 30px 28px
+			margin-bottom 30px
+			&:after
+				display block
+				content " "
+				position absolute
+				width 35px
+				height 2px
+				background red
+				bottom 0
+				left 50%
+				transform translateX(-50%)
+
+	&__subtitle
+		font-size 18px
+		margin-top 25px
+		position relative
+		&--accented
+			padding 0 0 20px
+			margin-bottom 25px
+			&:after
+				display block
+				content " "
+				position absolute
+				width 35px
+				height 2px
+				background red
+				bottom 0
+				left 0
+
+
+// Buttons
+.button
+	display block
+	padding 21px 0
+	font-size 18px
+	font-weight bold
+	&--green
+		color #fff
+		background #2ab95c
+	&--small
+		font-size 14px
+		padding 10px 0
+	&--rounded
+		border-radius 4px
+
+// Texts
+.text-center
+	text-align center
+
+// Columns
+.columns
+	&--half
+		columns 2
+
+// Line
+.line
+	border-top 1px solid #dfdfdf
+

@@ -1,0 +1,271 @@
+.form
+	&__paddings
+		padding 0 30px
+
+	&__group
+		display block
+		position relative
+		&--margin
+			margin 15px 0
+			& + .form__group--margin
+				margin-top 30px
+		&--input-margin
+			margin 20px 0
+
+	&__common-label
+		float left
+		width 150px
+		color #595959
+		& + .form__group
+			margin-left 150px
+		&--block
+			padding 8px 0
+
+	&__text
+		color #242424
+		font-size 12px
+
+	&__subscription
+		padding 0 0 20px
+
+	&__line
+		border-top 1px solid #dfdfdf
+
+	&__flex-group
+		display flex
+		flex-wrap nowrap
+
+
+
+.icon
+	width 15px
+	height 15px
+	&--textfield
+		position absolute
+		fill #d3d3d3
+		transition fill 350ms
+		left 15px
+		top 15px
+	&--file-attach
+	&--file-attached
+		left 0
+		top 0
+	&--file-remove
+		top 0
+		right 0
+
+.input
+	outline none
+	&:focus
+		outline none
+		& + .icon--textfield
+			fill #000
+
+
+	&--textfield
+	&--select
+		position relative
+		border 1px solid #f9f9f9
+		box-shadow inset 2px 2px 2px 0 #e1e1e1
+		border-radius 4px
+		padding 12px 12px 12px 40px
+		width 100%
+		color #919191
+		color rgba(145,145,145,0)
+		text-shadow 0 0 0 #919191
+		transition color 350ms, text-shadow 350ms
+		&:focus
+			color #000
+			text-shadow 0 0 0 #000
+			color rgba(0,0,0,0)
+
+	&--select
+		background #fff
+
+
+	&--sign
+		padding 12px 40px
+
+	&--radio
+	&--checkbox
+		display none
+
+	&--file
+		position absolute
+		cursor pointer
+		left 42px
+		top 0
+		bottom 0
+		right 0
+		width 100%
+		height 100%
+		&.hidden
+			left 0
+			opacity 0
+
+	&__addelement
+		display block
+		margin 20px 0
+		vertical-align top
+		.plus
+			display inline-block
+			width 15px
+			height 15px
+			fill #919191
+			margin-right 15px
+			position relative
+			top 2px
+		.text-add
+			display inline-block
+			color #919191
+
+	&__remove
+		display block
+		pointer-events none
+		position absolute
+		top 10px
+		right 10px
+		opacity 0
+		transition opacity 350ms
+		.plus
+			transform rotate(45deg)
+			width 15px
+			height 15px
+			fill #919191
+
+
+	&__label
+		cursor pointer
+		&--radio
+		&--checkbox
+			span
+				color #919191
+				position relative
+				padding-left 33px
+				&:before
+					display block
+					position absolute
+					content ""
+					width 14px
+					height 14px
+					box-shadow inset 2px 2px 2px 0 #e1e1e1
+					top 3px
+					left 0
+					transition all 200ms linear
+		&--radio
+			span:before
+				border-radius 50%
+			input:checked + span
+				&:before
+					border 5px solid #dd4939
+					box-shadow none
+					transition all 200ms linear
+		&--checkbox
+			span:before
+				border-radius 4px
+				font-family FontAwesome
+				content "\f00c"
+				color #fff
+				font-size 10px
+				padding 2px
+			input:checked + span
+				&:before
+					background #dd4939
+					box-shadow none
+					transition all 200ms linear
+
+		&--file
+			display block
+			position relative
+			width 100%
+			height 42px
+			background #f5f5f5
+			padding 11px 0 11px 42px
+			border-radius 4px
+			background #f5f5f5
+			overflow hidden
+			.attach-icon
+				pointer-events none
+				display block
+				position absolute
+				width 42px
+				padding 13px 14px
+				transition width 350ms linear
+				&--empty
+					top 0
+					bottom 0
+					left 0
+					background #dfdfdf
+					fill #0d0d0d
+					border-radius 4px 0 0 4px
+				&--attached
+					top 0
+					bottom 0
+					left 0
+					border-radius 4px 0 0 4px
+					background #26a854
+					fill #f5f5f5
+					display none
+				&--remove
+					pointer-events auto
+					top 0
+					bottom 0
+					right 0
+					border-radius 0 4px 4px 0
+					background #26a854
+					fill #f5f5f5
+					display none
+					z-index 10
+			.placeholder
+				pointer-events none
+				position relative
+				z-index 1
+			&.attachment
+				background #2ab95c
+				color #f5f5f5
+				font-weight bold
+				padding-right 42px
+				.attach-icon
+					&--empty
+						display none
+					&--attached
+					&--remove
+						display block
+				input
+					right 42px
+					width calc(100% - 42px)
+			&:hover
+				.attach-icon
+					&--empty
+					&--attached
+						width 100%
+						border-radius 4px
+
+		&--inline
+			display inline-block
+			padding 25px 0
+			& + *
+				margin-left 30px
+		&--block
+			padding 8px 0
+			display block
+
+	&__submit
+		display block
+
+	&__error
+		position absolute
+		color #ec4e4e
+		font-size 12px
+		top -17px
+
+// Complicated selectors
+.form
+	&__group
+		&:not(:only-of-type)
+			&:hover
+				& > .input__remove
+					pointer-events auto
+					opacity 1
+					cursor pointer
+

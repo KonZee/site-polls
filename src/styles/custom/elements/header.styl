@@ -1,0 +1,87 @@
+.header
+	flex none
+	display flex
+	justify-content center
+	&.header--gray
+		background #2d3e50
+		color #fff
+
+.logo
+	flex 0 0 auto
+	font-family "Ubuntu", sans-serif
+	font-size 18px
+	padding 22px 0 22px
+	&--gold
+		color gold
+		font-weight bold
+
+
+.menu
+	flex 1 0 auto
+	display flex
+	justify-content flex-end
+	align-items flex-start
+	a
+		color #fff
+		fill #fff
+		transition color 350ms, fill 350ms
+		&:hover
+			color gold
+			fill gold
+	svg
+		height 15px
+		margin 3px 17px 0 0
+
+	&__about
+		display flex
+		align-items flex-start
+		padding 22px 38px 22px
+		svg
+			margin-top 4px
+
+	&__add
+		display flex
+		align-items flex-start
+		padding 22px 38px 22px
+
+	&__polls
+		display flex
+		align-items flex-start
+		position relative
+		transition background 350ms
+		a
+			padding 22px 38px 22px
+		svg
+			margin-top 2px
+		.fa
+			transition transform 350ms
+		&:hover
+			background #273646
+			.fa
+				transform rotate(180deg)
+		&-dropdown
+			display none
+			position absolute
+			left 0
+			top 100%
+			list-style none
+			padding 0
+			margin 0
+			z-index 1
+			&--gray
+				background #2d3e50
+				background linear-gradient(to bottom, rgba(39,54,70,1) 0%,rgba(45,62,80,1) 10px,rgba(45,62,80,1) 100%);
+			a
+				display block
+				white-space nowrap
+
+
+
+	&__login
+		display flex
+		align-items flex-start
+		fill #fff
+		padding 22px 0 22px 38px
+		transition color 350ms, fill 350ms
+		&:hover
+			fill gold
