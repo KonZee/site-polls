@@ -1,0 +1,21 @@
+extends base
+
+block title
+	| Cписок вакансий
+
+block content
+	.container.container--centered
+		.lists.reset-flex
+			.lists__notify.lists__notify--white.notify
+				.notify__icon
+				.notify__result Вами успешно добавлена новая вакансия <a href="">"Менеджер по продажам"</a>
+				.notify__link
+					| Ссылка на опрос для соискателя
+					br
+					i.fa.fa-link
+					span &nbsp;
+					a(href="") http://this.is.link
+			.lists__data.lists__data--white.block
+				.block__title Список вакансий/опросов
+				.line
+				| Table

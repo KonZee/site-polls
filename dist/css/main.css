@@ -1254,6 +1254,27 @@ main {
 	margin-left: 15px;
 }
 
+.lists {
+	width: 100%;
+}
+
+.lists__notify {
+	margin-bottom: 20px;
+	display: inline-block;
+}
+
+.lists__notify--white {
+	background: #FFFFFF;
+}
+
+.lists__data {
+	width: 100%;
+}
+
+.lists__data--white {
+	background: #FFFFFF;
+}
+
 .footer {
 	display: -webkit-flex;
 	display: -ms-flexbox;
