@@ -114,25 +114,55 @@ a
 				bottom 0
 				left 0
 
+	&__avatar
+		margin 0 25px 20px 0
+
+	&--white
+		background white
+	&--rounded
+		border-radius 4px
+
+.vertical-margins
+	display inline-block
+	margin 30px 0
+
 
 // Buttons
 .button
 	display block
 	padding 21px 0
 	font-size 18px
-	font-weight bold
 	&--green
 		color #fff
 		background #2ab95c
+		font-weight bold
+	&--gray
+		color #aaa
+		background #f1f1f1
 	&--small
 		font-size 14px
 		padding 10px 0
 	&--rounded
 		border-radius 4px
+	&--inline
+		display inline-block
+		padding-left 15px
+		padding-right 15px
 
-// Texts
+// Aligns
 .text-center
 	text-align center
+.text-left
+	text-align left
+.text-right
+	text-align right
+.float-left
+	float left
+.float-right
+	float right
+.float-none
+	clear both
+
 
 // Columns
 .columns

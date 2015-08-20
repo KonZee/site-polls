@@ -5,45 +5,72 @@ block title
 
 block content
 	.container.container--centered
-		//.element.element--centered.flex--column
 		.answer
-			.form.block.answer__answer.answer__answer--white
-				.block__title Вакансия "%Название вакансии%"
-				.block__paddings
-					.answer__author
-						i Ответ <strong>Пантелеймона Христорождесвенского</strong>
-				.line
-				.block__paddings
-					.answer__section
-						.answer__section-title Опыт работы:
-						.answer__section-data 5 лет
-					.answer__section
-						.answer__section-title Как вы оцениваете свою квалификацию:
-						.answer__section-data Низкая
-					.answer__section
-						.answer__section-title Опишите, какие обязанности были на прошлой работе:
-						.answer__section-data
-							+lipsum(2, "paragraphs")
-					.answer__section
-						.answer__section-title Опишите, какие обязанности были на прошлой работе:
-						.answer__section-data
-							+lipsum(1, "paragraphs")
-					.answer__section
-						.answer__section-title Какие еще языки вы знаете:
-						.answer__section-languages
-							span.language php
-							span.language JavaScript
-							span.language JavaScript
-							span.language JavaScript
-							span.language JavaScript
-							span.language JavaScript
-							span.language JavaScript
-							span.language JavaScript
-							span.language Python
-					.block__subtitle Приложите примеры своих работ: <a href="">Скачать файл</a>
-				.line
-				.block__paddings
-			.block.answer__info.answer__info--white
-				.block__title Информация о соискателе
-				.line
+			.answer__answer
+				.block.block--white.block--rounded.reset-flex
+					.block__title Вакансия "%Название вакансии%"
+					.block__paddings
+						.answer__author
+							i Ответ <strong>Пантелеймона Христорождесвенского</strong>
+					.line
+					.block__paddings
+						.answer__section
+							.answer__section-title Опыт работы:
+							.answer__section-data 5 лет
+						.answer__section
+							.answer__section-title Как вы оцениваете свою квалификацию:
+							.answer__section-data Низкая
+						.answer__section
+							.answer__section-title Опишите, какие обязанности были на прошлой работе:
+							.answer__section-data
+								+lipsum(2, "paragraphs")
+						.answer__section
+							.answer__section-title Опишите, какие обязанности были на прошлой работе:
+							.answer__section-data
+								+lipsum(1, "paragraphs")
+						.answer__section
+							.answer__section-title Какие еще языки вы знаете:
+							.answer__section-languages
+								span.language php
+								span.language JavaScript
+								span.language JavaScript
+								span.language JavaScript
+								span.language JavaScript
+								span.language JavaScript
+								span.language JavaScript
+								span.language JavaScript
+								span.language Python
+						.block__subtitle.vertical-margins Приложите примеры своих работ: <a href="">Скачать файл</a>
+					.line
+					.block__paddings
+						a(href="").button.button--green.button--small.button--rounded.button--inline.input.input__submit.text-center.vertical-margins Добавить в избранное
+						a(href="").button.button--gray.button--small.button--rounded.button--inline.input.input__submit.text-center.vertical-margins.float-right Удалить
+			.answer__info
+				.block.block--white.block--rounded.reset-flex
+					.block__title Информация о соискателе
+					.line
+					.block__paddings
+						img.media.media--small.media--circle.float-left.block__avatar(src="images/koteg.png")
+						.answer__section
+							.answer__section-title Имя:
+							.answer__section-data Пантелеймон
+						.answer__section
+							.answer__section-title Фамилия:
+							.answer__section-data Христорождественский
+						.answer__section
+							.answer__section-title Возраст:
+							.answer__section-data 99 лет
+						.answer__section
+							.answer__section-title Город проживания:
+							.answer__section-data Лланвайр-Пуллгвингилл
+						.answer__section
+							.answer__section-title Описание:
+							.answer__section-data
+								+lipsum(2, 'paragraphs')
+					.line
+					.block__paddings
+						a(href="").block__subtitle.vertical-margins
+							i.fa.fa-download
+							span &nbsp;&nbsp;&nbsp;
+							| Скачать резюме соискателя
 
