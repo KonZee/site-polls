@@ -1,0 +1,26 @@
+extends base
+
+block title
+	| Информация о вакансии
+
+block content
+	.container.container--centered
+		.info
+			.info__base
+				.block.block--white.block--rounded.reset-flex
+					.block__title.block__title--accented.text-center Информация о вакансии
+					.form.block__paddings.clearfix
+						.form__group.form__group--margin
+							input.input.input--textfield(placeholder="Введите должность")
+							include elements/svg/biz
+						.form__group.form__group--margin
+							textarea.input.input--textfield(placeholder="Введите описание вакансии")
+							include elements/svg/tt
+						a(href="").button.button--gray.button--small.button--inline.button--rounded.button--arrowed.float-right.vertical-margins Продолжить
+
+			.info__questions
+				.block.block--white.block--rounded.reset-flex.block--disabled
+					.block__title.block__title--accented.text-center Формирование опросного листа
+					.block__paddings
+
+
