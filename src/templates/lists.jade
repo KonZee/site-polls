@@ -6,10 +6,11 @@ block title
 block content
 	.container.container--centered
 		.lists.reset-flex
-			.lists__notify.lists__notify--white.notify
-				.notify__icon
-				.notify__result Вами успешно добавлена новая вакансия <a href="">"Менеджер по продажам"</a>
-				.notify__link
+			.lists__notify.notify
+				.notify__icon.notify__icon--white
+					include elements/svg/check
+				.notify__result.notify__result--white Вами успешно добавлена новая вакансия <a href="">"Менеджер по продажам"</a>
+				.notify__link.notify__link--white
 					| Ссылка на опрос для соискателя
 					br
 					i.fa.fa-link

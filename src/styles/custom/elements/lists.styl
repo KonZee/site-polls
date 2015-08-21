@@ -1,13 +1,52 @@
 .lists
 	width 100%
-
 	&__notify
 		margin-bottom 20px
 		display inline-block
-		&--white
-			background #fff
+
 
 	&__data
 		width 100%
 		&--white
 			background #fff
+
+.notify
+	display flex
+	justify-content flex-start
+	&__icon
+		flex 0 0 100px
+		padding 17px 30px
+		position relative
+		height 75px
+		svg
+			fill #2ab95c
+			width 15px
+			height 15px
+			position absolute
+			left 50%
+			top 50%
+			transform translate(-50%,-50%)
+		&:after
+			display block
+			position absolute
+			content ""
+			width 40px
+			height 40px
+			border 3px solid #2ab95c
+			border-radius 50%
+
+	&__result
+		flex 0 1 330px
+		padding 17px 30px 17px 0
+	&__link
+		flex 0 1 330px
+		padding 17px 30px
+		margin-left 1px
+		position relative
+		.fa-link
+			transform scale(-1,1)
+			color #ccc
+			margin-right 10px
+
+	[class*="--white"]
+		background #fff
