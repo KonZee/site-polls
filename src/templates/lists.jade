@@ -18,5 +18,76 @@ block content
 					a(href="") http://this.is.link
 			.lists__data.lists__data--white.block
 				.block__title Список вакансий/опросов
+				a(href=).button.button--green.button--small.button--inline.button--rounded.lists__data-add Добавить новый опрос
 				.line
-				| Table
+				.block__paddings
+					table.table.tablesorter
+						thead
+							tr
+								th №
+								th Должность
+								th Кол-во ответов
+								th Результаты
+								th Ссылка на опрос
+								th Редактировать/удалить
+						tbody
+							tr
+								td 1
+								td
+									+lipsum(3, "words")
+								td
+									+lipsum(2, "words")
+								td
+									a(href="") Смотреть
+								td
+									a(href="") another.link
+								td.table__edit
+									a(href="" alt="Редактировать")
+										include elements/svg/edit
+									a(href="" alt="Удалить")
+										include elements/svg/remove
+							tr
+								td 2
+								td
+									+lipsum(1, "words")
+								td
+									+lipsum(2, "words")
+								td
+									a(href="") Смотреть
+								td
+									a(href="") dot.com
+								td.table__edit
+									a(href="" alt="Редактировать")
+										include elements/svg/edit
+									a(href="" alt="Удалить")
+										include elements/svg/remove
+							tr
+								td 3
+								td
+									+lipsum(4, "words")
+								td
+									+lipsum(2, "words")
+								td
+									a(href="") Смотреть
+								td
+									a(href="") more-another.link
+								td.table__edit
+									a(href="" alt="Редактировать")
+										include elements/svg/edit
+									a(href="" alt="Удалить")
+										include elements/svg/remove
+							tr
+								td 4
+								td
+									+lipsum(2, "words")
+								td
+									+lipsum(5, "words")
+								td
+									a(href="") Смотреть
+								td
+									a(href="") new.site
+								td.table__edit
+									a(href="" alt="Редактировать")
+										include elements/svg/edit
+									a(href="" alt="Удалить")
+										include elements/svg/remove

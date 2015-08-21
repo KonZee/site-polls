@@ -28,4 +28,7 @@ $(document).ready(function(){
 //		$(this).parent().remove();
 //	});
 
+	// Enable tablesorter
+	$('table').tablesorter();
+
  });
