@@ -881,7 +881,6 @@ a {
 	font-weight: normal;
 	text-align: left;
 	padding: 24px 10px 24px 40px;
-	white-space: nowrap;
 	position: relative;
 	cursor: pointer;
 }
@@ -911,20 +910,21 @@ a {
 	font-family: FontAwesome;
 	content: '\f0dc';
 	left: 20px;
-	top: 27px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	        transform: translateY(-50%);
 }
 
 .table th.headerSortDown:after {
-	top: 24px;
 	content: '\f0dd';
 }
 
 .table th.headerSortUp:after {
-	top: 30px;
 	content: '\f0de';
 }
 
 .table td {
+	word-break: break-all;
 	padding: 10px;
 	position: relative;
 	text-align: center;
@@ -1440,6 +1440,27 @@ main {
 
 .notify [class*='--white'] {
 	background: #FFFFFF;
+}
+
+.results {
+	width: 100%;
+	position: relative;
+}
+
+.results--white {
+	background: #FFFFFF;
+}
+
+.results__settings {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+}
+
+.results__settings svg {
+	width: 25px;
+	height: 25px;
+	fill: #2D3E50;
 }
 
 .footer {

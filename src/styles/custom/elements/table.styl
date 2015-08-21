@@ -4,6 +4,7 @@
 	margin-top 30px
 	border-radius 4px
 	border-collapse inherit
+	//table-layout fixed
 
 	thead
 		color #fff
@@ -14,7 +15,7 @@
 		font-weight normal
 		text-align left
 		padding 24px 10px 24px 40px
-		white-space nowrap
+		//white-space nowrap
 		position relative
 		cursor pointer
 		&:first-child
@@ -37,16 +38,16 @@
 			font-family FontAwesome
 			content "\f0dc"
 			left 20px
-			top 27px
+			top 50%
+			transform translateY(-50%)
 		&.headerSortDown:after
-			top 24px
 			content "\f0dd"
 		&.headerSortUp:after
-			top 30px
 			content "\f0de"
 
 
 	td
+		word-break break-all
 		padding 10px
 		position relative
 		text-align center
