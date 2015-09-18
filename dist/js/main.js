@@ -31,4 +31,40 @@ $(document).ready(function(){
 	// Enable tablesorter
 	$('table').tablesorter();
 
+	/*
+	 * Columns on the result page
+	 */
+	// Show/Hide options menu
+	$('.js-results-settings').on('click', function(e){
+		e.preventDefault();
+		$('.js-results-options').slideToggle();
+	});
+
+	// Prepare data for options window
+	var resultsTable = $('.js-results-table');
+	var dataLength = resultsTable.find('th').length;
+	for (var i = 0; i < dataLength; i++){
+		var th = resultsTable.find('th').eq(i);
+		var text = th.text();
+		$('.js-results-options-content').append("<label class='input__label input__label--checkbox'><input class='input input--checkbox' type='checkbox'><span>" + text+ "</span></div>");
+		if(th.is(':visible')){
+			$('.js-results-options-content').children().eq(i).find('input').prop('checked', true);
+		}
+	}
+
+	// Check/uncheck checkbox
+	$('.js-results-options-content').on('click', 'label', function(){
+		var index = $(this).index();
+		if ($(this).children('input').is(':checked')){
+			resultsTable.find('tr').each(function(){
+				$(this).children().eq(index).show();
+			});
+		}
+		else{
+			resultsTable.find('tr').each(function(){
+				$(this).children().eq(index).hide();
+			});
+		}
+	});
+
  });

@@ -7,41 +7,85 @@ block content
 	.container.container--centered
 		.block.results.results--white.reset-flex
 			.block__title Результаты опросов на должность "%Название вакансии%"
-			a(href=).results__settings
+			a(href=).results__settings.js-results-settings
 				include elements/svg/settings
+			.result__options.result-options.js-results-options
+				.result-options__header
+					.title Настройка представления
+					.subtitle Укажите поля, которые вы бы хотели видеть в таблице
+				.result-options__content.js-results-options-content
 			.line
 			.block__paddings
-				table.table.tablesorter
-					thead
-						tr
-							th Избранные
-							th Имя
-							th Фамилия
-							th Вопрос № 1
-							th Вопрос № 2
-							th Вопрос № 3
-							th
-								| Редактировать/
-								br
-								|Детально
-							th
-								| Детально
-								br
-								| Удалить
-					tbody
-						tr
-							td 1
-							td Пантелеймон
-							td Христорождственский
-							td
-								a(href="")
-									+lipsum(3, "words")
-							td
-								a(href="")
-									+lipsum(1, "words")
-							td
-								a(href="")
-									+lipsum(4, "words")
+				.table-wrapper
+					table.table.tablesorter.js-results-table
+						thead
+							tr
+								th Избранные
+								th Имя
+								th Фамилия
+								th Вопрос № 1
+								th Вопрос № 2
+								th Вопрос № 3
+								th Вопрос № 4
+								th Вопрос № 5
+								th Вопрос № 6
+								th Редактировать/Детально
+								th Детально/Удалить
+						tbody
+							tr
+								td 1
+								td Пантелеймон
+								td Христорождственский
+								td
+									a(href="")
+										+lipsum(3, "words")
+								td
+									a(href="")
+										+lipsum(1, "words")
+								td
+									a(href="")
+										+lipsum(4, "words")
+								td
+									a(href="")
+										+lipsum(4, "words")
+								td
+									a(href="")
+										+lipsum(4, "words")
+								td
+									a(href="")
+										+lipsum(4, "words")
+								td.table__edit
+									a(href="" alt="Редактировать")
+										include elements/svg/edit
+									a(href="" alt="Удалить")
+										include elements/svg/settings
+								td.table__edit
+									a(href="" alt="Редактировать")
+										include elements/svg/settings
+									a(href="" alt="Удалить")
+										include elements/svg/remove
+							tr
+								td 2
+								td Пантелеймон
+								td Христорождственский
+								td
+									a(href="")
+										+lipsum(3, "words")
+								td
+									a(href="")
+										+lipsum(1, "words")
+								td
+									a(href="")
+										+lipsum(4, "words")
+								td
+									a(href="")
+										+lipsum(4, "words")
+								td
+									a(href="")
+										+lipsum(4, "words")
+								td
+									a(href="")
+										+lipsum(4, "words")
 								td.table__edit
 									a(href="" alt="Редактировать")
 										include elements/svg/edit
