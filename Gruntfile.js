@@ -83,7 +83,7 @@ module.exports = function (grunt){
 			},
 			all: [
 			'src/scripts/**/*.js',
-			'!src/scripts/libs/**/*'
+			'!src/scripts/jquery.tablesorter.js'
 			],
 			configFiles: [
 			'.csscomb.json',
