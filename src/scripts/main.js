@@ -46,11 +46,16 @@ $(document).ready(function(){
 	for (var i = 0; i < dataLength; i++){
 		var th = resultsTable.find('th').eq(i);
 		var text = th.text();
-		$('.js-results-options-content').append("<label class='input__label input__label--checkbox'><input class='input input--checkbox' type='checkbox'><span>" + text+ "</span></div>");
+		$('.js-results-options-content').append("<label class='input__label input__label--checkbox input__label--block'><input class='input input--checkbox' type='checkbox'><span>" + text+ "</span></div>");
 		if(th.is(':visible')){
 			$('.js-results-options-content').children().eq(i).find('input').prop('checked', true);
 		}
 	}
+
+	// Set minimum height of results for prevent options out of table
+	var optionsHeigth = $('.js-results-options').show().height();
+	$('.js-results-options').hide();
+	$('.results').css({'min-height': optionsHeigth + 100 + 'px'});
 
 	// Check/uncheck checkbox
 	$('.js-results-options-content').on('click', 'label', function(){
