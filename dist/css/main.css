@@ -511,6 +511,20 @@ a {
 	border-top: 1px solid #DFDFDF;
 }
 
+main {
+	position: relative;
+}
+
+.overlay {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: rgba(255,255,255,0.5);
+	display: none;
+}
+
 .form__paddings {
 	padding: 0 30px;
 }

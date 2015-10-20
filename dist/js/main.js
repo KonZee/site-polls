@@ -37,7 +37,12 @@ $(document).ready(function(){
 	// Show/Hide options menu
 	$('.js-results-settings').on('click', function(e){
 		e.preventDefault();
-		$('.js-results-options').slideToggle();
+		$('.js-results-options').slideDown();
+		$('.overlay').fadeIn();
+	});
+	$('.overlay').click(function(){
+		$(this).fadeOut();
+		$('.js-results-options').slideUp();
 	});
 
 	// Prepare data for options window
