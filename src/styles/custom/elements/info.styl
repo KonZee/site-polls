@@ -1,9 +1,51 @@
 .info
 	display flex
 	flex 0 1 100%
+	flex-wrap wrap
 	&__base
 		flex 0 1 456px
 		margin-right 15px
+		display flex
+		flex-direction column
+		> div
+			flex 1 0 100%
 	&__questions
 		flex 0 1 654px
 		margin-left 15px
+		display flex
+		flex-direction column
+		> div
+			flex 1 0 100%
+	&__table
+		flex 1 1 100%
+		margin-top 30px
+
+.info-question
+	display flex
+	padding-bottom 15px
+	&__input
+		flex 1 1 50%
+		margin-rigth 15px
+	&__preview
+		flex 1 1 50%
+		margin-left 15px
+
+.question-preview
+	&__title
+		display block
+		font-size 15px
+		font-weight bold
+		color #000
+		margin-bottom 15px
+	&__body
+		display block
+		padding 15px
+		border 1px solid #f9f9f9
+		box-shadow 2px 2px 2px 0 #e1e1e1 inset
+		min-height 110px
+		> .title
+			color #000
+			font-size 15px
+			font-weight bold
+		> .body
+			color #919191

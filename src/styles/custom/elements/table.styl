@@ -7,9 +7,11 @@
 	//width 100%
 	//max-width 100%
 	min-width 100%
-	margin-top 30px
 	border-radius 4px
 	border-collapse inherit
+	margin 10px 0
+	&--margin-top
+		margin-top 30px
 
 	thead
 		color #fff
@@ -37,7 +39,7 @@
 				bottom 0
 				background #34475c
 				left 0
-		&:after
+		&:not(:last-child):after
 			display block
 			position absolute
 			font-family FontAwesome
@@ -49,6 +51,7 @@
 			content "\f0dd"
 		&.headerSortUp:after
 			content "\f0de"
+
 
 
 	td
@@ -66,6 +69,7 @@
 				background #ececec
 				left 0
 
+
 	tr
 		&:nth-child(2n) td
 			background #f5f5f5
@@ -76,7 +80,8 @@
 				border-bottom-right-radius 4px
 
 	&__edit
+		min-width 70px
 		a
 			display inline-block
 			&+a
-				margin-left 30px
+				margin-left 10px

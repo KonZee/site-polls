@@ -21,6 +21,84 @@ block content
 			.info__questions
 				.block.block--white.block--rounded.reset-flex.block--disabled
 					.block__title.block__title--accented.text-center Формирование опросного листа
-					.block__paddings
+					.block__paddings.info-question
+						.form.info-question__input
+							.form__group.form__group--margin
+								input.input.input--textfield(placeholder="Заголовок вопроса")
+								include elements/svg/tt
+							.form__group.form__group--margin
+								select.input.input--select
+									option 1
+									option 1
+									option 1
+								include elements/svg/list
+							label.input__label.input__label--checkbox.input__label--block
+								input.input.input--checkbox(type="checkbox")
+								span Множественный выбор
+							a(href="").button.button--green.button--small.button--rounded.input.input__submit.text-center Добавить вопрос
+						.info-question__preview.question-preview
+							.question-preview__title Как будет выглядеть ваш вопрос:
+							.question-preview__body
+								.title Вопрос №1
+								.body Введите текст
+
+
+
+			.info__table
+				.block.block--white.block--rounded.reset-flex.block--padding.block--disabled.clearfix
+					.block__title Список вопросов
+					table.table
+						thead
+							tr
+								th.table-header.headerSortDown №
+								th.table-header Заголовок вопрос
+								th.table-header Множественный выбор
+								th.disable-sorting
+						tbody
+							tr
+								td 1
+								td
+									+lipsum(5, "words")
+								td
+									+lipsum(Math.ceil(Math.random()*2)+2, 'characters')
+								td.table__edit
+									a(href="" title="Редактировать")
+										include elements/svg/settings
+									a(href="" title="Удалить")
+										include elements/svg/remove
+							tr
+								td 1
+								td
+									+lipsum(5, "words")
+								td
+									+lipsum(Math.ceil(Math.random()*2)+2, 'characters')
+								td.table__edit
+									a(href="" title="Редактировать")
+										include elements/svg/settings
+									a(href="" title="Удалить")
+										include elements/svg/remove
+							tr
+								td 1
+								td
+									+lipsum(5, "words")
+								td
+									+lipsum(Math.ceil(Math.random()*2)+2, 'characters')
+								td.table__edit
+									a(href="" title="Редактировать")
+										include elements/svg/settings
+									a(href="" title="Удалить")
+										include elements/svg/remove
+							tr
+								td 1
+								td
+									+lipsum(5, "words")
+								td
+									+lipsum(Math.ceil(Math.random()*2)+2, 'characters')
+								td.table__edit
+									a(href="" title="Редактировать")
+										include elements/svg/settings
+									a(href="" title="Удалить")
+										include elements/svg/remove
+					a(href="").button.button--green.button--small.button--single.button--inline.button--rounded.button--right Сохранить опросный лист
 
 

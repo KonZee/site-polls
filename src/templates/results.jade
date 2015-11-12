@@ -17,20 +17,19 @@ block content
 			.line
 			.block__paddings
 				.table-wrapper
-					table.table.tablesorter.js-results-table
+					table.table.table--margin-top.tablesorter.js-results-table
 						thead
 							tr
-								th Избранные
-								th Имя
-								th Фамилия
-								th Вопрос № 1
-								th Вопрос № 2
-								th Вопрос № 3
-								th Вопрос № 4
-								th Вопрос № 5
-								th Вопрос № 6
-								th Редактировать/Детально
-								th Детально/Удалить
+								th.table-header.headerSortDown Избранные
+								th.table-header Имя
+								th.table-header Фамилия
+								th.table-header Вопрос № 1
+								th.table-header Вопрос № 2
+								th.table-header Вопрос № 3
+								th.table-header Вопрос № 4
+								th.table-header Вопрос № 5
+								th.table-header Вопрос № 6
+								th.disable-sorting
 						tbody
 							tr
 								td 1
@@ -55,14 +54,9 @@ block content
 									a(href="")
 										+lipsum(4, "words")
 								td.table__edit
-									a(href="" alt="Редактировать")
-										include elements/svg/edit
-									a(href="" alt="Удалить")
+									a(href="" title="Редактировать")
 										include elements/svg/settings
-								td.table__edit
-									a(href="" alt="Редактировать")
-										include elements/svg/settings
-									a(href="" alt="Удалить")
+									a(href="" title="Удалить")
 										include elements/svg/remove
 							tr
 								td 2
@@ -87,13 +81,8 @@ block content
 									a(href="")
 										+lipsum(4, "words")
 								td.table__edit
-									a(href="" alt="Редактировать")
-										include elements/svg/edit
-									a(href="" alt="Удалить")
+									a(href="" title="Редактировать")
 										include elements/svg/settings
-								td.table__edit
-									a(href="" alt="Редактировать")
-										include elements/svg/settings
-									a(href="" alt="Удалить")
+									a(href="" title="Удалить")
 										include elements/svg/remove
 	.overlay

@@ -29,7 +29,7 @@ $(document).ready(function(){
 //	});
 
 	// Enable tablesorter
-	$('table').tablesorter();
+	$('table.tablesorter').tablesorter();
 
 	/*
 	 * Columns on the result page
@@ -48,6 +48,7 @@ $(document).ready(function(){
 	// Prepare data for options window
 	var resultsTable = $('.js-results-table');
 	var dataLength = resultsTable.find('th').length;
+	dataLength--; // Remove last column, it must be always visible
 	for (var i = 0; i < dataLength; i++){
 		var th = resultsTable.find('th').eq(i);
 		var text = th.text();

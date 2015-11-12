@@ -63,7 +63,6 @@
 
 
 	&--textfield
-	&--select
 		position relative
 		border 1px solid #f9f9f9
 		box-shadow inset 2px 2px 2px 0 #e1e1e1
@@ -75,6 +74,25 @@
 		text-shadow 0 0 0 #919191
 		transition color 350ms, text-shadow 350ms
 		resize vertical
+		&:focus
+			color #000
+			text-shadow 0 0 0 #000
+			color rgba(0,0,0,0)
+	&--select
+		position relative
+		border 1px solid #f9f9f9
+		box-shadow inset 2px 2px 2px 0 #e1e1e1
+		border-radius 4px
+		padding 9px 12px 9px 40px
+		width 100%
+		color #919191
+		color rgba(145,145,145,0)
+		text-shadow 0 0 0 #919191
+		transition color 350ms, text-shadow 350ms
+		resize vertical
+		appearance none
+		&::-ms-expand
+			display none
 		&:focus
 			color #000
 			text-shadow 0 0 0 #000
